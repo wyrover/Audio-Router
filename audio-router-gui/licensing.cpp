@@ -7,8 +7,7 @@ dialog_licensing::dialog_licensing(window& parent) : parent(parent)
     SYSTEMTIME time;
     GetLocalTime(&time);
 
-    if(time.wYear > 2016 || 
-        (time.wYear == 2016 && (time.wMonth > 6 || (time.wMonth == 6 && time.wDay > 1))))
+    if(time.wYear < 0)
         this->DoModal(parent);
 }
 

@@ -29,7 +29,7 @@ bool app_list::populate_list(const filters_t & filters) {
     if ( ! this-> populate_list(true, filters))
         return false; 
 #ifdef _WIN64
-    return this -  > populate_list(false, filters); 
+    return this -> populate_list(false, filters); 
 #else
     return true; 
 #endif
